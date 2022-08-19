@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment_screen_1</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=monospace:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="status">
+                <div class="statusIcon"> <i class="material-icons">keyboard_arrow_left</i> </div>
+                <div class="statusTxt b">Order Status</div>                
+            </div> <!--status End-->
+
+            <div class="dlvryTime">
+                <div class="dlvryTxt">
+                    <div>Estimated delivery time</div>
+                    <div>... ... ...  </div>
+                </div>
+                <div class="dlvryIcon"><i class="material-icons">local_shipping</i></div>
+            </div> <!--dlvryTime End-->
+
+            <div class="waitTxt">
+                <div class="waitIcon"><i class="material-icons">hourglass_empty</i></div>
+                <div class="waitTxt1">Please wait for the restaurant to confirm your order.</div>
+            </div> <!--waitTxt End-->
+
+            <div class="ordrDtls">
+                <div class="collapsible collapsible1">
+                    <div class="ordrDtlsTxt b">
+                        <div>Order Details</div>
+                        
+                    </div>
+                   <div><span class="PM1"><strong>–</strong></span></div>
+                </div>
+                <div class="content1 content">
+                    <div class="ordrIdTxt b">Order ID - <b class="IdTxt">#78923504</b></div>
+                    <div class="ordrSubDtls">
+                        <div class="itemDtls1">Total Items:</div>
+                        <div class="itemDtls2">11</div>
+                        <div class="ordrFor1">Order For:</div>
+                        <div class="ordrFor2">Oleo Bone</div>
+                        <div class="shpngAdd1">Shipping Address:</div>
+                        <div class="shpngAdd2">6391 Elgin St. Celina, Delaware 10299</div>
+                    </div>
+                </div>
+            </div>  <!--ordrDtls End-->
+
+            <div class="ordrdFrom">
+                <div class=" collapsible collapsible2">
+                    <div class="ordrdDtlsTxt b">
+                        <div>Ordered From</div>
+                    </div>
+                    <div><span class="PM2"><strong>–</strong></span></div>
+                </div>
+                <div class="content content2">
+                    <div class="ordrdAddTxt1">
+                        <div class="b">Italiano - Sector 61</div>
+                        <div><a href="#" class="Mapbtn">Map View</a></div>
+                    </div>
+                    <div class="ordrdAddTxt2">
+                        <div class="ordrdAddIcon"></div>
+                        <div class="ordrdAddTxt3"><i class="material-icons">add_location</i> <span>A15 Sector 61, Noida 201301</span></div>
+                    </div>
+                    <button type="button" class="CallBtn Btn b"><i class="material-icons">call</i> Call Restaurant</button>
+                </div>
+            </div>  <!--ordrdFrom End-->
+
+            <div class="SmmryTxt">
+                <div class=" collapsible collapsible3">
+                    <div class="totalSmmryTxt b">
+                        <div>Total Summary</div>
+                        
+                    </div>
+                     <div><span class="PM3"><strong>–</strong></span></div>
+                </div>
+                <div class="content content3">
+                    <div class="SmmrySubDtls ">
+                        <div class="SmmrySubDtls1">Subtotal:</div>
+                        <div class="SmmrySubDtls2">$375.00</div>
+                    </div>
+                    <div class="SmmrySubDtls ">
+                        <div class="SmmrySubDtls1">Service Fee:</div>
+                        <div class="SmmrySubDtls2">$4.00</div>
+                    </div>
+                    <div class="SmmrySubDtls ">
+                        <div class="SmmrySubDtls1">Coupon Discount:</div>
+                        <div class="SmmrySubDtls2">-$6.00</div>
+                    </div>
+                    <div class="SmmrySubDtls ">
+                        <div class="SmmrySubDtls1">Sales Tax:</div>
+                        <div class="SmmrySubDtls2">$6.00</div>
+                    </div>
+                </div>
+            </div>  <!--SmmryTxt End-->
+
+            <div class="submitDiv">
+                <!-- <a href="#" class="SubmitBtn">Submit</a> -->
+                <button type="button" class="SubmitBtn Btn b">Submit</button>
+            </div>
+
+        </div> <!--container End-->
+    </div> <!--main End-->
+
+
+
+    <script>
+     
+		$(".content1,.content2,.content3").removeClass("content");
+		$(".collapsible").css({"border-bottom": "1px dashed var(--main)","margin-bottom": ".5rem"})
+		
+		$(".collapsible1").click(function(){
+		//alert($(".PM1").text())								  
+		$(".content1").toggle();
+		if($(".PM1").text()=="+"){
+			$(".PM1").html("<b>–</b>")
+			$(".collapsible1").css({"border-bottom": "1px dashed var(--main)","margin-bottom": ".5rem"})
+		}else{
+			$(".PM1").html("<b>+</b>")
+			$(".collapsible1").css({"border-bottom": "1px dashed #cf8e5400","margin-bottom": "0rem"})
+			
+		}
+		//$(".content1").addClass("content");								  
+		})
+		
+		
+		$(".collapsible2").click(function(){
+		$(".content2").toggle();
+		if($(".PM2").text()=="+"){
+			$(".PM2").html("<b>–</b>")
+			$(".collapsible2").css({"border-bottom": "1px dashed var(--main)","margin-bottom": ".5rem"})
+		}else{
+			$(".PM2").html("<b>+</b>")
+			$(".collapsible2").css({"border-bottom": "1px dashed #cf8e5400","margin-bottom": "0rem"})
+		}
+		})
+		
+		
+		$(".collapsible3").click(function(){
+		$(".content3").toggle();
+		//$(".collapsible3").addClass("active");
+		
+		if($(".PM3").text()=="+"){
+			$(".PM3").html("<b>–</b>")
+			$(".collapsible3").css({"border-bottom": "1px dashed var(--main)","margin-bottom": ".5rem"})
+		}else{
+			$(".PM3").html("<b>+</b>")
+			$(".collapsible3").css({"border-bottom": "1px dashed #cf8e5400","margin-bottom": "0rem"})
+		}
+		//$(".content3").addClass("content");								  
+		})
+		
+    </script>
+    
+</body>
+</html>

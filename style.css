@@ -1,0 +1,207 @@
+@charset "utf-8";
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing:border-box;
+}
+
+:root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+    --main: #cf8e54;
+    --bdycolor: rgb(137, 134, 134);
+    --scndycolor: #cf8e542e;
+    --brdrcolor: 1px solid #c9c9c9;
+    --FSize:1.05rem;
+    --DlvryFSize:0.9rem;
+    --WaitFSize:0.85rem;
+	--BoxShdw: 0.05rem 0.05rem 0.3rem 0.05rem #80808066;
+  }
+
+  
+
+
+
+@media screen and (min-width: 320px) {
+  html{
+    font-size: 12px;
+  }
+  
+} @media screen and (min-width: 420px) {
+  html{
+    font-size: 16px;
+  }
+  
+} @media screen and (min-width: 480px) {
+  html{
+    font-size: 18px;
+  }
+  
+} @media screen and (min-width: 540px) {
+  html{
+    font-size: 20px;
+  }
+  
+} @media screen and (min-width: 700px) {
+  html{
+    font-size: 22px;
+  }
+
+}
+
+
+
+
+ body { 
+    background-color: var(--bdycolor); 
+    font-family: 'monospace', serif;
+}
+
+.b {font-weight: bold;}
+
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+	max-width: 780px;
+	width: 780px;
+    padding: 1rem;
+    background-color: var(--white); 
+
+}
+
+.status {font-size: var(--FSize);}
+
+.status,.dlvryTime,.waitTxt,.ordrDtls,.ordrdFrom,.SmmryTxt,.ordrDtlsTxt,.ordrdDtlsTxt,.ordrdAddTxt1,.ordrdAddTxt3 {
+    display: flex;
+}
+
+.dlvryTime {background-color: var(--main); border-radius: .3rem; padding: .5rem .5rem; margin: .5rem 0em;
+    color: var(--white);
+    font-size: var(--DlvryFSize);
+	border: var(--brdrcolor); box-shadow:var(--BoxShdw);
+}
+.waitTxt {background-color: var(--scndycolor); border-radius: .3em; padding: .5em .5em;  margin: .5em 0em;
+    font-size: var(--WaitFSize);
+    font-weight: bold;
+	border: var(--brdrcolor); box-shadow:var(--BoxShdw);
+}
+.ordrDtls {border-radius: .5em; padding: .5em .5em; margin: .5em .0em; border: var(--brdrcolor); box-shadow:var(--BoxShdw);}
+.ordrdFrom {border-radius: .5em; padding: .5em .5em; margin: .5em .0em; border: var(--brdrcolor); box-shadow:var(--BoxShdw);}
+.SmmryTxt {border-radius: .5em; padding: .5em .5em; margin: .5em .0em; border: var(--brdrcolor); box-shadow:var(--BoxShdw);}
+
+.dlvryTime,.ordrDtlsTxt,.ordrdDtlsTxt,.ordrdAddTxt1 {justify-content: space-between;}
+
+.ordrSubDtls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ordrDtls,.SmmryTxt,.ordrdFrom {
+    flex-direction: column;
+}
+
+.ordrdAddTxt3,.status {align-items: center;}
+
+.status {gap:.5em;}
+.material-icons {font-size:1.5rem !important;vertical-align:middle;}
+.statusIcon {border:1px solid #80808066; padding:0rem; border-radius:.4rem;}
+
+.Btn {
+    border: 2px solid var(--main);
+    margin: .2em;
+	font-size:.8rem;
+  }
+
+.Mapbtn,.waitIcon {color:var(--main);}
+
+
+.CallBtn {
+    color: var(--white); background-color: var(--main); padding: .1rem;
+    border-radius: .2rem; 
+    margin: .2rem auto;
+}
+
+.CallBtn {
+    display: flex;
+    margin: 0.2rem auto;
+    width: 90%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.totalSmmryTxt,.SmmrySubDtls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.submitDiv {display:flex; justify-content: center;}
+.SubmitBtn {color: var(--white); background-color: var(--main); padding: .3rem 1rem; border-radius: .2rem; }
+
+button:active, button:hover {
+    background-color: #cf8e5450;
+    color: black;
+ }
+
+
+ 
+
+
+
+  .ordrdAddTxt1,.ordrdAddTxt2,.ordrIdTxt,.ordrSubDtls div,.SmmrySubDtls {padding: .2rem 0rem;}
+
+  .totalSmmryTxt,.ordrdDtlsTxt,.ordrDtlsTxt{padding: .1rem 0rem;}
+  .IdTxt {color: var(--main);}
+
+
+	.PM1,.PM2,.PM3 {font-size:1.2rem;}
+
+  .collapsible {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--FSize);
+  }
+  
+  
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+
+  .active{
+    border-bottom: 1px dashed var(--main);
+    margin-bottom: .5rem;
+    
+  }
+  .collapsible:after {
+    /*content: '\02795';*/
+    color: black;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+ /* .active:after {
+    content: "\2796";
+    
+  }*/
+
+
+
+
